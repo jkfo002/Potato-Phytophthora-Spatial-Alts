@@ -9,4 +9,4 @@ We report a comprehensive atlas of spatiotemporal transcriptomes in potato leave
 - fig3: Characteristics of Pathogen Targeted Cells (PTCs)
 - fig4: Dynamic responses within host microenvironment
 # Acknowledgements
-Thanks to Yuying Li and Zhaonian Dong for contribution of the script for this analysis
+Thanks to Yuying Li and Zhaonian Dong for developing scripts for these analysis.
