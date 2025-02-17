@@ -8,5 +8,7 @@ We report a comprehensive atlas of spatiotemporal transcriptomes in potato leave
 - fig2: Cell type specifics immune response
 - fig3: Characteristics of Pathogen Targeted Cells (PTCs)
 - fig4: Dynamic responses within host microenvironment
+- seurat_pipeline: Basic seurat pipeline for data processing and cell clustering
+- giotto_pipeline: Construct Delaunay network for spatial neighbor identification
 # Acknowledgements
 Thanks to Yuying Li and Zhaonian Dong for developing scripts for these analysis.
