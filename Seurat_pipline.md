@@ -275,7 +275,6 @@ plot_umap <- function(df, outprefix, col_mapping){
 
 plot_spatial <- function(df, outprefix, col_mapping){
     p <- ggplot() +
-    #  16是实心圆，21是空心圆, 21才可以画出边界
     geom_point(data=df,mapping=aes(x=x,y=y,color=cluster), size=0.5, shape=16) + 
     #scale_fill_gradientn(colours =c("#f6fd2d", "#ff0000")) +
     theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(),
