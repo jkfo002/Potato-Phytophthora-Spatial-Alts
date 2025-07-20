@@ -7,6 +7,7 @@ We report a comprehensive atlas of spatiotemporal transcriptomes in potato leave
 # Environment
 ```yaml
 Singularity sif file based on miniconda3
+Avaliable via Google drive: https://drive.google.com/file/d/1WsLoydvRQOpTGL6UIyMCluEcEI4ZLbCc/view?usp=sharing
 
 [ENV name] seuratv43:
   seurat=4.3.0
