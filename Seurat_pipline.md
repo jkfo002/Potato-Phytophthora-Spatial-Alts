@@ -337,4 +337,35 @@ colors <- my_color[1:length(tissues)]
 col_mapping <- setNames(colors, tissues)
 plot_umap(df3, paste0(out_path, "UMAP.tissue.pdf"), col_mapping)
 ```
+## 4. Function for marker genes and different expression gene (DEG) identification
+
+DEG
+
+```R
+diff_exp_paired <- function(obj, id1, id2, outprefix){
+    diff.wilcox = FindMarkers(obj, only.pos = FALSE, 
+                                min.pct = 0.25, logfc.threshold = 0.1,
+                                ident.1 = id1, ident.2 = id2
+                                )
+    diff.wilcox$gene = rownames(diff.wilcox)
+    all.markers = diff.wilcox %>% select(gene, everything()) %>% subset(p_val<0.05)
+    all.markers$gene=paste0('A157_',all.markers$gene)
+    write.table(all.markers,
+    file=paste0(outprefix, "_DEG_gene.txt"),
+    sep="\t",col.names=T,quote=F,row.names=F)
+}
+```
+Marker gene
+
+```R
+diff_marker_exp <- function(obj, outprefix){
+    diff.wilcox = FindAllMarkers(obj, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.1)
+    all.markers = diff.wilcox %>% select(gene, everything()) %>% subset(p_val<0.05)
+    all.markers$gene=paste0('A157_',all.markers$gene)
+    write.table(all.markers,
+    file=paste0(outprefix, "_marker_gene.txt"),
+    sep="\t",col.names=T,quote=F,row.names=F)
+}
+```
+
 
