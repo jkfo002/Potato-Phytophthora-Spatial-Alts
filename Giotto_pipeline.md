@@ -133,7 +133,6 @@ draw_sample_combine=function(dat.plot, fpath) {
   #dat.plot <- tissue_dat[tissue_dat$gene_exp>0,]
   #dat.plot.0 <-  tissue_dat[tissue_dat$gene_exp==0,]
   p <- ggplot() +
-    #  16是实心圆，21是空心圆, 21才可以画出边界
     geom_point(data=dat.plot,mapping=aes(x=y,y=x, color=pi_layers), size=0.5, shape=16) +
     theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(),
           panel.background = element_rect(fill="black"),plot.background=element_rect(fill="black")) +
